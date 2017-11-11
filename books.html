@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <style>
+		#cotegory{
+			float:left;
+		}
+		.book, #newbook{
+			position: relative;
+			display: inline-block;
+			margin  : 25px;
+			width: 220px;
+			height:250px;
+			border: 1px solid grey;
+			border-radius:10px;
+		}
+		.imges, .name, .toolbar{
+			position: absolute;
+			margin-left: 55px;
+		}
+		.imges{margin-top:10px;}
+		.name{margin-top:170px;}
+		.toolbar{
+			margin-top:220px}
+
+		#newbook .imges img{
+			width: 60px;
+			height:60px;
+			margin-left:25px;
+			margin-top:60px;
+		}
+
+	
+	</style>
+	
+	<script>
+$(document).ready(function(){
+    $(".delete").click(function(){
+        $(this).parentsUntil("#bookslist").remove();
+    });
+});
+	</script>
+ </head>
+
+<body>
+<!--header-->
+
+
+<!--fotter-->
+
+<div class="container"><!--1-->
+<!--menu to choose a cotegory of book
+&& I use bootstrap-->
+<div class="panel-group col-sm-3 "> <!--2-->
+    <div class="panel panel-default"><!--3-->
+      <div class="panel-heading"><!--4-->
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#cotegory">Cotegory</a>
+        </h4>
+      </div><!--4-->
+	  <div id="cotegory" class="panel-collapse collapse"><!--5-->
+        <ul class="list-group">
+		<li class="list-group-item ">all</li>
+          <li class="list-group-item">hestory</li>
+          <li class="list-group-item">art</li>
+          <li class="list-group-item">computer scince</li>
+        </ul>
+     
+    </div><!--5-->
+  </div><!--3-->
+   </div><!--2-->
+
+<!--books-->
+
+<div id = "bookslist" class= "col-sm-9"><!--6-->
+
+    <a href = "newbook.html"><div id= "newbook"> <!--7-->
+        <div class = "imges"><img src="add.png" alt ="add a new book"  ></div>
+        <div class = "name" > <p> add a new book</p> </div>
+    </div><!--7--></a>
+	
+    <div class= "book"><!--8-->
+       <div class = "imges"> <img src= "book.png " alt = "book" width="112.3px" height="158.7px"></div>
+	   <div class = "name"> <p>book's name1</p><p>category's name</p></div>
+	   <div class = "toolbar"><!--9-->
+	        <span class = "edit">edit <img src = "edit.png" width = "20px" height = "20px" alt = "edit a book"></span>
+			<span class  = "delete">delete <img src = "delete.png" width= "20px" height = "20px" alt = "delete a book"></span> 
+	   </div><!--9-->
+    </div><!--8-->
+    <div class= "book"> <!--10-->
+       <div class = "imges"> <img src= "book.png " alt = "book" width="112.3px" height="158.7px"></div>
+	   <div class = "name"> <p>book's name2</p><p>category's name</p></div>
+	   <div class = "toolbar"><!--11-->
+	        <span class = "edit">edit <img src = "edit.png" width = "20px" height = "20px" alt = "edit a book"></span>
+			<span class  = "delete">delete <img src = "delete.png" width= "20px" height = "20px" alt = "delete a book"></span> 
+	   </div><!--11-->
+    </div><!--10-->
+    <div class= "book"><!--12--> 
+	   <div class = "imges"> <img src= "book.png " alt = "book" width="112.3px" height="158.7px"></div>
+	   <div class = "name"> <p>book's name3</p><p>category's name</p></div>
+	   <div class = "toolbar"><!--13-->
+	        <span class = "edit">edit <img src = "edit.png" width = "20px" height = "20px" alt = "edit a book"></span>
+			<span class  = "delete">delete <img src = "delete.png" width= "20px" height = "20px" alt = "delete a book"></span> 
+	   </div><!--13-->
+    </div><!--12-->
+
+</div><!--6-->
+
+
+
+
+
+<!--pager bar--> 
+   <ul class="pager">
+    <li><a href="#"><<</a></li>
+	<li><a href="#">1</a></li>
+	<li><a href="#">2</a></li>
+    <li><a href="#">>></a></li>
+  </ul> 
+</div><!--container class-->
+
+</body>
+</html>
